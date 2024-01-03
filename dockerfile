@@ -36,10 +36,10 @@ RUN yarn install && \
     yarn build
 
 # production image
-FROM ubuntu:22.04 as prod
-COPY --from=dev /home/hello-world-grd/server/bin/server /home/hello-world-grd/server/bin/server
-COPY --from=dev /home/hello-world-grd/client/build/ /home/hello-world-grd/client/build/
+FROM scratch as prod
+COPY --from=dev /home/hello-world-grd/server/bin/server server/bin/
+COPY --from=dev /home/hello-world-grd/client/build/ client/build/
 
 EXPOSE 8000
 
-CMD /bin/bash
+CMD server/bin/server
