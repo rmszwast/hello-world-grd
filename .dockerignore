@@ -1,0 +1,4 @@
+docker-cmds.txt
+client/node_modules
+client/build
+server/bin
