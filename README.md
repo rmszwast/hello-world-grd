@@ -8,5 +8,5 @@ Docker version 24.0.7
 `cd` to the repository and run `docker build -t <tag> .`, where `<tag>` is the desired image name.
 
 ## Run Instructions
-Run `docker run -itp 8000:8000 --rm <tag>`. \
+Run `docker run -itp 8000:8000 --rm <tag> server/bin/server`. \
 Navigate to `http://localhost:8000`.
