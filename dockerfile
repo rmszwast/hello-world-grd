@@ -42,5 +42,3 @@ COPY --from=dev /home/hello-world-grd/server/bin/server server/bin/
 COPY --from=dev /home/hello-world-grd/client/build/ client/build/
 
 EXPOSE 8000
-
-CMD server/bin/server
